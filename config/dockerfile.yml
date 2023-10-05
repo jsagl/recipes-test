@@ -3,6 +3,7 @@
 ---
 options:
   bin-cd: true
+  compose: true
   jemalloc: true
   label:
     fly_launch_runtime: rails
