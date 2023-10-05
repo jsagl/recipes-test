@@ -37,7 +37,7 @@ module Services
         return [] if params[:ingredients].blank?
         return [] unless params[:ingredients].is_a?(String)
 
-        params[:ingredients].split('|').first(10).filter_map do |ingredient|
+        params[:ingredients].split('|').first(20).filter_map do |ingredient|
           next if ingredient.length < 3
 
           sanitized_ingredient = ActiveRecord::Base.sanitize_sql_like(ingredient)
